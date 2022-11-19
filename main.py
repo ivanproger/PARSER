@@ -5,8 +5,6 @@ from bs4 import BeautifulSoup as BS
 BASE_URL = "https://index.kodifikant.ru"
 
 DB='parser.json'
-with open(DB) as json_file:
-    data = json.load(json_file)
 
 response = req.get(f'{BASE_URL}/ru/')
 soup = BS(response.text, 'lxml')
